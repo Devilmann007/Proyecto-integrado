@@ -47,6 +47,20 @@ INSTALLED_APPS = [
     'apps.riego.mantenimiento',
     'apps.riego.sistema',
     'apps.riego.usuarios',
+    'apps.gestion_granos.calidad',
+    'apps.gestion_granos.granos',
+    'apps.gestion_granos.inventarios',
+    'apps.gestion_granos.lotes',
+    'apps.gestion_granos.procesamiento',
+    'apps.gestion_granos.reportes',
+    'apps.gestion_invernaderos.actuadores',
+    'apps.gestion_invernaderos.alertas',
+    'apps.gestion_invernaderos.configuraciones',
+    'apps.gestion_invernaderos.invernaderos',
+    'apps.gestion_invernaderos.lecturas',
+    'apps.gestion_invernaderos.secciones',
+    'apps.gestion_invernaderos.sensores',
+    'apps.gestion_invernaderos.usuario',
  ]
 
 MIDDLEWARE = [
