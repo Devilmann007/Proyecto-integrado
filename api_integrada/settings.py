@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'apps.gestion_invernaderos.secciones',
     'apps.gestion_invernaderos.sensores',
     'apps.gestion_invernaderos.usuario',
+    
  ]
 
 MIDDLEWARE = [

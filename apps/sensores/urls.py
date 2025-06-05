@@ -1,7 +1,13 @@
 from django.urls import path
-from apps.gestion_invernaderos.sensores.views import SensorListCreateView, SensorRetrieveUpdateDestroyView
+from .views import (
+    SensorListCreateView, SensorDetailView,
+    LecturaListCreateView, LecturaDetailView
+)
 
 urlpatterns = [
-    path('', SensorListCreateView.as_view(), name='sensores-list-create'),
-    path('<int:id_sensor>/', SensorRetrieveUpdateDestroyView.as_view(), name='sensores-detail'),
+    path('sensores/', SensorListCreateView.as_view(), name='sensor-list-create'),
+    path('sensores/<int:pk>/', SensorDetailView.as_view(), name='sensor-detail'),
+    
+    path('lecturas/', LecturaListCreateView.as_view(), name='lectura-list-create'),
+    path('lecturas/<int:pk>/', LecturaDetailView.as_view(), name='lectura-detail'),
 ]
