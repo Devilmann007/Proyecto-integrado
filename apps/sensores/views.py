@@ -1,6 +1,6 @@
 from rest_framework import generics
-from apps.gestion_invernaderos.sensores.models import Sensor
-from apps.gestion_invernaderos.sensores.serializers import SensorSerializer
+from apps.sensores.models import Sensor
+from apps.sensores.serializers import SensorSerializer
 
 # Listar todos los sensores y crear nuevos
 class SensorListCreateView(generics.ListCreateAPIView):

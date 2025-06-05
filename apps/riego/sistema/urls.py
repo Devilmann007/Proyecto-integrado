@@ -11,7 +11,7 @@ from apps.riego.sistema.views import (
     configuracion_riegoViewSet,
     lectura_sensorViewSet,
 )
-from apps.riego.usuarios.views import (
+from backend.apps.usuarios.views import (
     usuarioViewSet,
 )
 from apps.riego.mantenimiento.views import (
