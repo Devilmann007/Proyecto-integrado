@@ -1,15 +1,5 @@
 from rest_framework import serializers
-from apps.cosechas.models import Sensor, LecturaSensor, Reporte
-
-class SensorSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Sensor
-        fields = ['id', 'nombre', 'ubicacion', 'ultima_lectura']
-
-class LecturaSensorSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = LecturaSensor
-        fields = ['id', 'sensor', 'valor', 'fecha']
+from apps.cosechas.models import Reporte
 
 class ReporteSerializer(serializers.ModelSerializer):
     class Meta:

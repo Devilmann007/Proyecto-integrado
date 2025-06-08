@@ -2,7 +2,8 @@ from rest_framework import viewsets
 # Importa los modelos de la aplicación
 from apps.usuarios.models import usuario
 # Importa el serializador para el modelo usuario
-from backend.apps.usuarios.serializers import usuarioSerializer
+from apps.usuarios.serializers import usuarioSerializer
+
 # ViewSet para el modelo usuario
 class usuarioViewSet(viewsets.ModelViewSet):
     queryset = usuario.objects.all()  # Consulta todos los registros de usuario

@@ -11,9 +11,6 @@ from apps.riego.sistema.views import (
     configuracion_riegoViewSet,
     lectura_sensorViewSet,
 )
-from backend.apps.usuarios.views import (
-    usuarioViewSet,
-)
 from apps.riego.mantenimiento.views import (
     mantenimientoViewSet,
     historial_riegoViewSet,
@@ -23,7 +20,6 @@ from apps.riego.mantenimiento.views import (
 router = DefaultRouter()
 
 # Registra cada viewset con un prefijo de URL
-router.register(r'usuarios', usuarioViewSet)  # ViewSet para usuarios
 router.register(r'zonas', zona_riegoViewSet)  # ViewSet para zonas de riego
 router.register(r'sensores', sensorViewSet)  # ViewSet para sensores
 router.register(r'configuraciones', configuracion_riegoViewSet)  # ViewSet para configuraciones de riego

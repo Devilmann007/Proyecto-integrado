@@ -38,30 +38,32 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    # app cosechas
     'apps.cosechas',
-    'apps.nutricion.administrador',
-    'apps.nutricion.cultivo',
-    'apps.nutricion.requerimiento',
-    'apps.nutricion.sensor',
-    'apps.nutricion.terreno',
-    'apps.riego.mantenimiento',
-    'apps.riego.sistema',
-    'apps.riego.usuarios',
+    # app gestion_granos
     'apps.gestion_granos.calidad',
     'apps.gestion_granos.granos',
     'apps.gestion_granos.inventarios',
     'apps.gestion_granos.lotes',
     'apps.gestion_granos.procesamiento',
     'apps.gestion_granos.reportes',
+    # app gestion_invernaderos
     'apps.gestion_invernaderos.actuadores',
     'apps.gestion_invernaderos.alertas',
     'apps.gestion_invernaderos.configuraciones',
     'apps.gestion_invernaderos.invernaderos',
-    'apps.gestion_invernaderos.lecturas',
     'apps.gestion_invernaderos.secciones',
-    'apps.gestion_invernaderos.sensores',
-    'apps.gestion_invernaderos.usuario',
-    
+    #app nutricion
+    'apps.nutricion.cultivo',
+    'apps.nutricion.requerimiento',
+    'apps.nutricion.terreno',
+    # app riego
+    'apps.riego.mantenimiento',
+    'apps.riego.sistema',
+    # app sensores 
+    'apps.sensores',  
+    # app usuarios
+    'apps.usuarios',    
  ]
 
 MIDDLEWARE = [

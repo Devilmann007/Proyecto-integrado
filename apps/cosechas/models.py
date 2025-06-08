@@ -1,27 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-class UsuarioPersonalizado(AbstractUser):
-    # Roles disponibles
-    class Roles(models.TextChoices):
-        ADMIN = 'ADMIN', 'Administrador'
-        AGRICULTOR = 'AGRICULTOR', 'Agricultor'
-
-    rol = models.CharField(
-        max_length=10,
-        choices=Roles.choices,
-        default=Roles.AGRICULTOR  # Valor por defecto
-    )
-
-    # Campos adicionales (opcionales)
-    telefono = models.CharField(max_length=15, blank=True)
-
-    def _str_(self):
-        return f"{self.username} ({self.get_rol_display()})"
-
-
-
-
 class Reporte(models.Model):
     titulo = models.CharField(max_length=200)
     contenido = models.TextField()

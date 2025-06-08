@@ -1,7 +1,9 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from apps.cosechas.models import Sensor, LecturaSensor, Reporte
-from apps.cosechas.serializers import SensorSerializer, LecturaSensorSerializer, ReporteSerializer
+from apps.cosechas.models import Reporte
+from apps.cosechas.serializers import ReporteSerializer
+from apps.sensores.models import Sensor, LecturaSensor
+from apps.sensores.serializers import SensorSerializer, LecturaSensorSerializer
 from datetime import timedelta
 from django.utils import timezone
 

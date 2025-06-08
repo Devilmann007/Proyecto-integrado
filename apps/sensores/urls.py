@@ -1,13 +1,12 @@
 from django.urls import path
-from .views import (
-    SensorListCreateView, SensorDetailView,
-    LecturaListCreateView, LecturaDetailView
+from apps.sensores.views import (
+    SensorListCreateView, SensorRetrieveUpdateDestroyView
 )
 
 urlpatterns = [
     path('sensores/', SensorListCreateView.as_view(), name='sensor-list-create'),
-    path('sensores/<int:pk>/', SensorDetailView.as_view(), name='sensor-detail'),
+    path('sensores/<int:pk>/', SensorListCreateView.as_view(), name='sensor-detail'),
     
-    path('lecturas/', LecturaListCreateView.as_view(), name='lectura-list-create'),
-    path('lecturas/<int:pk>/', LecturaDetailView.as_view(), name='lectura-detail'),
+    path('lecturas/', SensorRetrieveUpdateDestroyView.as_view(), name='lectura-list-create'),
+    path('lecturas/<int:pk>/', SensorRetrieveUpdateDestroyView.as_view(), name='lectura-detail'),
 ]
