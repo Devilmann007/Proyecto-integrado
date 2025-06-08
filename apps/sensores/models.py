@@ -6,7 +6,6 @@ class Sensor(models.Model):
         ('temperatura', 'Temperatura'),
         ('lluvia', 'Lluvia'),
         ('humedad_suelo', 'Humedad del Suelo'),
-        # Puedes agregar más tipos aquí
     ]
 
     tipo = models.CharField(
@@ -21,7 +20,7 @@ class Sensor(models.Model):
     ultima_lectura = models.FloatField(default=0.0)
     ultima_actualizacion = models.DateTimeField(auto_now=True)
 
-    def _str_(self):
+    def __str__(self):
         return f"{self.get_tipo_display()} ({self.ubicacion})"
 
 class LecturaSensor(models.Model):
@@ -34,5 +33,5 @@ class LecturaSensor(models.Model):
     )
     fecha_hora = models.DateTimeField(auto_now_add=True)
 
-    def _str_(self):
+    def __str__(self):
         return f"{self.sensor.get_tipo_display()} - {self.valor} {self.unidad} @ {self.fecha_hora}"

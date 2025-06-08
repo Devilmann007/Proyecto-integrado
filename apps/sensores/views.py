@@ -11,4 +11,3 @@ class SensorListCreateView(generics.ListCreateAPIView):
 class SensorRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Sensor.objects.all()
     serializer_class = SensorSerializer
-    lookup_field = 'id_sensor'

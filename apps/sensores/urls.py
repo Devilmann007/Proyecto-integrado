@@ -5,8 +5,8 @@ from apps.sensores.views import (
 
 urlpatterns = [
     path('sensores/', SensorListCreateView.as_view(), name='sensor-list-create'),
-    path('sensores/<int:pk>/', SensorListCreateView.as_view(), name='sensor-detail'),
+    path('sensores/<int:pk>/', SensorRetrieveUpdateDestroyView.as_view(), name='sensor-detail'),
     
-    path('lecturas/', SensorRetrieveUpdateDestroyView.as_view(), name='lectura-list-create'),
+    path('lecturas/', SensorListCreateView.as_view(), name='lectura-list-create'),
     path('lecturas/<int:pk>/', SensorRetrieveUpdateDestroyView.as_view(), name='lectura-detail'),
 ]

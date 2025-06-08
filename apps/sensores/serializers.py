@@ -1,6 +1,5 @@
 from rest_framework import serializers
-from .models import Sensor
-from .models import LecturaSensor
+from apps.sensores.models import Sensor , LecturaSensor
 
 class SensorSerializer(serializers.ModelSerializer):
     tipo_display = serializers.CharField(source='get_tipo_display', read_only=True)

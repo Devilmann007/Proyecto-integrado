@@ -7,7 +7,7 @@ urlpatterns = [
     path('cosechas/', include('apps.cosechas.urls')),
     path('cultivo/', include('apps.nutricion.cultivo.urls')),
     path('requerimiento/', include('apps.nutricion.requerimiento.urls')),
-    path('sensor/', include('apps.sensores.urls')),
+    path('sensores/', include('apps.sensores.urls')),
     path('terreno/', include('apps.nutricion.terreno.urls')),
     path('riego/', include('apps.riego.sistema.urls')),
     path('calidad/', include('apps.gestion_granos.calidad.urls')),
