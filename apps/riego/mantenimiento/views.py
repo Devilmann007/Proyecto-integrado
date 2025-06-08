@@ -9,7 +9,7 @@ from apps.riego.mantenimiento.serializers import (historial_riegoSerializer, man
 class historial_riegoViewSet(viewsets.ModelViewSet):
     queryset = historial_riego.objects.all()  # Consulta todos los historiales de riego
     serializer_class = historial_riegoSerializer  # Serializador para el modelo historial_riego
-    http_method_names = ['get']  # Métodos HTTP permitidos
+    http_method_names = ['get', 'post']  # Métodos HTTP permitidos
 
 # ViewSet para el modelo mantenimiento
 class mantenimientoViewSet(viewsets.ModelViewSet):

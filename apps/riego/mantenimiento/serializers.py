@@ -3,6 +3,7 @@ from rest_framework import serializers
 # Importa el modelo usuario desde la aplicación 'sistema'
 from apps.riego.mantenimiento.models import historial_riego, mantenimiento
 # Serializador para el modelo historial_riego
+
 class historial_riegoSerializer(serializers.ModelSerializer):
     class Meta:
         model = historial_riego  # Modelo a serializar
