@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'apps.gestion_granos.procesamiento',
     'apps.gestion_granos.reportes',
     # app gestion_invernaderos
-    'apps.gestion_invernaderos.actuadores',
     'apps.gestion_invernaderos.alertas',
     'apps.gestion_invernaderos.configuraciones',
     'apps.gestion_invernaderos.invernaderos',
