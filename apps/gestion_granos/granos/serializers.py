@@ -4,4 +4,4 @@ from apps.gestion_granos.granos.models import Grano
 class GranoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Grano
-        fields = '__all__'
+        fields = ('id', 'nombre', 'descripcion', 'fecha_registro')
