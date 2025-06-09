@@ -2,9 +2,9 @@ from django.db import models
 
 class LoteGrano(models.Model):
     TIPO_GRANO_CHOICES = [
-        ('maiz', 'Maíz'),
-        ('trigo', 'Trigo'),
-        ('soja', 'Soja'),
+        ('maiz', 'maiz'),
+        ('trigo', 'trigo'),
+        ('soja', 'soja'),
     ]
 
     tipo_grano = models.CharField(max_length=20, choices=TIPO_GRANO_CHOICES)

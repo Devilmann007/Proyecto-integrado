@@ -14,6 +14,7 @@ urlpatterns = [
     path('calidad/', include('apps.gestion_granos.calidad.urls')),
     path('grano/', include('apps.gestion_granos.granos.urls')),
     path('inventarios/', include('apps.gestion_granos.inventarios.urls')),
+    path('procesamiento/', include ('apps.gestion_granos.procesamiento.urls')),
     path('lote/', include('apps.gestion_granos.lotes.urls')),
     path('reportes/', include('apps.gestion_granos.reportes.urls')),
     path('alerta/', include('apps.gestion_invernaderos.alertas.urls')),

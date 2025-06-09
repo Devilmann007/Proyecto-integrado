@@ -16,6 +16,6 @@ class ReporteCalidad(models.Model):
     peso_neto = models.DecimalField(max_digits=10, decimal_places=2)
     observaciones = models.TextField(blank=True)
 
-    def _str_(self):
+    def __str__(self):
         return f"{self.tipo_grano} - {self.fecha}"
 
