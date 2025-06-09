@@ -1,0 +1,3269 @@
+{
+	"info": {
+		"_postman_id": "97295e42-f841-42ea-9998-9813302be5d0",
+		"name": "Pruebas proyecto integrado",
+		"description": "Colección Postman organizada con carpetas para el CRUD de Usuarios y Sensores.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42346745"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Crear Usuario (POST)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Ana López\",\n    \"correo\": \"ana@example.com\",\n    \"contraseña\": \"password123\",\n    \"rol\": \"operario\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/usuarios/usuarios/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"usuarios",
+								"usuarios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Usuarios (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/usuarios/usuarios/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"usuarios",
+								"usuarios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Usuario por ID (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/usuarios/usuarios/5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"usuarios",
+								"usuarios",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Usuario (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Ana López (Actualizado)\",\n    \"correo\": \"ana.nueva@example.com\",\n    \"contraseña\": \"nuevaPassword456\",\n    \"rol\": \"operario\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/usuarios/usuarios/5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"usuarios",
+								"usuarios",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Usuario (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/usuarios/usuarios/5/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"usuarios",
+								"usuarios",
+								"5",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sensores",
+			"item": [
+				{
+					"name": "Crear Sensor (POST)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tipo\": \"humedad\",\n    \"descripcion\": \"Sensor de humedad en el invernadero\",\n    \"ubicacion\": \"Invernadero 1\",\n    \"estado\": true,\n    \"fecha_instalacion\": \"2025-06-07T12:00:00Z\",\n    \"ultima_lectura\": 45.5\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/sensores/sensores/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sensores",
+								"sensores",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Sensores (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/sensores/sensores/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sensores",
+								"sensores",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Sensor por ID (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/sensores/sensores/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sensores",
+								"sensores",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Sensor (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tipo\": \"temperatura\",\n    \"descripcion\": \"Sensor de temperatura actualizado\",\n    \"ubicacion\": \"Invernadero 2\",\n    \"estado\": false,\n    \"fecha_instalacion\": \"2025-06-07T12:00:00Z\",\n    \"ultima_lectura\": 22.0\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/sensores/sensores/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sensores",
+								"sensores",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Sensor (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/sensores/sensores/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sensores",
+								"sensores",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Historial",
+			"item": [
+				{
+					"name": "Crear Historial Riego (POST)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fecha\": \"2025-06-07\",\n    \"duracion\": \"00:30:00\",\n    \"cantidad_agua\": 15.5\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/mantenimiento/historial/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"mantenimiento",
+								"historial",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Historial Riego (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/mantenimiento/historial/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"mantenimiento",
+								"historial",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mantenimientos",
+			"item": [
+				{
+					"name": "Crear Mantenimiento (POST)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fecha\": \"2025-06-07\",\n    \"descripcion\": \"cambio de filtros de agua\",\n    \"tipo\": \"preventivo\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/mantenimiento/mantenimientos/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"mantenimiento",
+								"mantenimientos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Mantenimientos (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/mantenimiento/mantenimientos/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"mantenimiento",
+								"mantenimientos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Mantenimiento por ID (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/mantenimiento/mantenimientos/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"mantenimiento",
+								"mantenimientos",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Mantenimiento (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fecha\": \"2025-06-08\",\n    \"descripcion\": \"Cambio de filtros\",\n    \"tipo\": \"correctivo\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/mantenimiento/mantenimientos/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"mantenimiento",
+								"mantenimientos",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Mantenimiento (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/mantenimiento/mantenimientos/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"mantenimiento",
+								"mantenimientos",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Zona Riego",
+			"item": [
+				{
+					"name": "Crear Zona Riego (POST)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre_zona\": \"Zona A\",\n    \"tipo_planta\": \"Tomate\",\n    \"necesidades_hidricas\": \"Alta\",\n    \"exposicion_solar\": \"Pleno sol\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/riego/zonas/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"riego",
+								"zonas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Zonas Riego (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/riego/zonas/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"riego",
+								"zonas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Zona Riego por ID(GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/riego/zonas/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"riego",
+								"zonas",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Zona Riego(PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre_zona\": \"Zona A\",\r\n    \"tipo_planta\": \"Tomate\",\r\n    \"necesidades_hidricas\": \"Alta\",\r\n    \"exposicion_solar\": \"8 horas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/riego/zonas/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"riego",
+								"zonas",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Zona Riego(DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/riego/zonas/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"riego",
+								"zonas",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sistema",
+			"item": [
+				{
+					"name": "Crear Configuración (POST)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"frecuencia\": \"00:24:00\",\n    \"hora_inicio\": \"06:00:00\",\n    \"duracion\": \"00:30:00\",\n    \"tipo_riego\": \"aspersi\\u00f3n\",\n    \"caudal\": 2.5,\n    \"presion\": 1.2\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/riego/configuraciones/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"riego",
+								"configuraciones",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Configuraciones (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/riego/configuraciones/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"riego",
+								"configuraciones",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Configuraciones por ID (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/riego/configuraciones/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"riego",
+								"configuraciones",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Configuraciones (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"frecuencia\": \"00:24:00\",\r\n    \"hora_inicio\": \"06:22:00\",\r\n    \"duracion\": \"00:30:00\",\r\n    \"tipo_riego\": \"riego constante\",\r\n    \"caudal\": 2.5,\r\n    \"presion\": 1.2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/riego/configuraciones/2/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"riego",
+								"configuraciones",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Configuraciones (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/riego/configuraciones/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"riego",
+								"configuraciones",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cultivos",
+			"item": [
+				{
+					"name": "Crear Cultivos (POST)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipo\": \"Yuca\",\r\n  \"fecha_siembra\": \"2025-06-01\",\r\n  \"fecha_cosecha\": \"2025-09-15\",\r\n  \"nombre_terreno\": \"Terreno A\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/cultivo/create/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"cultivo",
+								"create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Cultivos (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/cultivo/cultivos/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"cultivo",
+								"cultivos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Cultivos por ID (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/cultivo/1/cultivos/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"cultivo",
+								"1",
+								"cultivos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Cultivos (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipo\": \"Maíz\",\r\n  \"fecha_siembra\": \"2025-06-01\",\r\n  \"fecha_cosecha\": \"2025-09-15\",\r\n  \"nombre_terreno\": \"Terreno D\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/cultivo/1/update/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"cultivo",
+								"1",
+								"update",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Cultivos (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/cultivo/1/delete/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"cultivo",
+								"1",
+								"delete",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Requerimiento",
+			"item": [
+				{
+					"name": "Crear Requerimientos (POST)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipo\": \"Nitrógeno\",\r\n  \"tipo_de_terreno\": \"Franco arenoso\",\r\n  \"fecha_de_siembra\": \"2025-07-15\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/requerimiento/create/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"requerimiento",
+								"create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Requerimientos (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/requerimiento/requerimientos/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"requerimiento",
+								"requerimientos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Requerimientos por ID (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/requerimiento/1/requerimientos/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"requerimiento",
+								"1",
+								"requerimientos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Requerimientos (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipo\": \"Potasio\",\r\n    \"tipo_de_terreno\": \"Arcilloso\",\r\n    \"fecha_de_siembra\": \"2025-06-15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/requerimiento/1/update/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"requerimiento",
+								"1",
+								"update",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Requerimientos (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/requerimiento/1/delete/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"requerimiento",
+								"1",
+								"delete",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Terrenos",
+			"item": [
+				{
+					"name": "Crear Terrenos (POST)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"propietario\": \"Rosio Huertas\",\r\n  \"nombre\": \"Finza el progreso\",\r\n  \"ubicacion\": \"Vereda Parcelas , Municipio de Mosquera, Cundinamarca\",\r\n  \"tamaño\": 22.7\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/terreno/create/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"terreno",
+								"create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Terrenos (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/terreno/terrenos/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"terreno",
+								"terrenos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Terrenos por ID (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/terreno/1/terrenos/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"terreno",
+								"1",
+								"terrenos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Terrenos (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"propietario\": \"Juan Pérez\",\r\n    \"nombre\": \"Lote El Progreso\",\r\n    \"ubicacion\": \"Vereda La Esperanza, Municipio de Cajicá, Cundinamarca\",\r\n    \"tamaño\": 5.5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/terreno/1/update/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"terreno",
+								"1",
+								"update",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Terreno (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/terreno/1/delete/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"terreno",
+								"1",
+								"delete",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Alertas",
+			"item": [
+				{
+					"name": "Crear Alertas (POST)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"seccion\": 1,\r\n    \"tipo_alerta\": \"Humedad baja\",\r\n    \"mensaje\": \"La humedad en la sección es inferior al umbral mínimo.\",\r\n    \"nivel_criticidad\": \"Alta\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}alerta/alertas/",
+							"host": [
+								"{{base_url}}alerta"
+							],
+							"path": [
+								"alertas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Alertas (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}alerta/alertas/",
+							"host": [
+								"{{base_url}}alerta"
+							],
+							"path": [
+								"alertas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Alertas por ID (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}alerta/1/alertas/",
+							"host": [
+								"{{base_url}}alerta"
+							],
+							"path": [
+								"1",
+								"alertas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Alertas (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_alerta\": 1,\r\n    \"seccion\": 1,\r\n    \"tipo_alerta\": \"Humedad baja\",\r\n    \"mensaje\": \"La humedad en la sección es inferior al umbral mínimo.\",\r\n    \"fecha_hora\": \"2025-06-08T09:13:20.098214Z\",\r\n    \"nivel_criticidad\": \"Media\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}alerta/1/alertas/",
+							"host": [
+								"{{base_url}}alerta"
+							],
+							"path": [
+								"1",
+								"alertas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Alertas (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}alerta/1/alertas/",
+							"host": [
+								"{{base_url}}alerta"
+							],
+							"path": [
+								"1",
+								"alertas",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Secciones",
+			"item": [
+				{
+					"name": "Crear Secciones (POST)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre_seccion\": \"Sección A - Tomate\",\r\n    \"invernadero\": 1,\r\n    \"cultivo_actual\": \"Tomate\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}seccion/secciones/",
+							"host": [
+								"{{base_url}}seccion"
+							],
+							"path": [
+								"secciones",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Secciones (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}seccion/secciones/",
+							"host": [
+								"{{base_url}}seccion"
+							],
+							"path": [
+								"secciones",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Secciones por ID (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}seccion/1/secciones",
+							"host": [
+								"{{base_url}}seccion"
+							],
+							"path": [
+								"1",
+								"secciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Secciones (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_seccion\": 1,\r\n    \"nombre_seccion\": \"Sección A - Maiz\",\r\n    \"invernadero\": 1,\r\n    \"cultivo_actual\": \"Maiz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}seccion/1/secciones",
+							"host": [
+								"{{base_url}}seccion"
+							],
+							"path": [
+								"1",
+								"secciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Secciones (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}seccion/1/secciones",
+							"host": [
+								"{{base_url}}seccion"
+							],
+							"path": [
+								"1",
+								"secciones"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invernaderos",
+			"item": [
+				{
+					"name": "Crear Invernaderos (POST)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Invernadero Norte\",\r\n    \"ubicacion\": \"Finca El Paraíso, Zona 3\",\r\n    \"usuario\": 3\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/invernadero/invernaderos/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"invernadero",
+								"invernaderos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Invernaderos (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/invernadero/invernaderos/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"invernadero",
+								"invernaderos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Invernaderos por ID (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/invernadero/1/invernaderos/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"invernadero",
+								"1",
+								"invernaderos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Invernaderos (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_invernadero\": 1,\r\n    \"nombre\": \"Invernadero Norte\",\r\n    \"ubicacion\": \"Finca El Paraíso, Zona 4\",\r\n    \"usuario\": 3,\r\n    \"fecha_creacion\": \"2025-06-08T09:12:54.594305Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/invernadero/1/invernaderos/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"invernadero",
+								"1",
+								"invernaderos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Invernaderos (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/invernadero/1/invernaderos/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"invernadero",
+								"1",
+								"invernaderos",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Configuraciones",
+			"item": [
+				{
+					"name": "Crear Configuraciones (POST)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipo_cultivo\": \"Lechuga\",\r\n    \"parametro\": \"humedad_min\",\r\n    \"valor_minimo\": 30.00,\r\n    \"valor_maximo\": 60.00,\r\n    \"unidad\": \"%\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}configuracion/configuraciones/",
+							"host": [
+								"{{base_url}}configuracion"
+							],
+							"path": [
+								"configuraciones",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Configuraciones (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}configuracion/configuraciones/",
+							"host": [
+								"{{base_url}}configuracion"
+							],
+							"path": [
+								"configuraciones",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener configuraciones por ID (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}configuracion/1/",
+							"host": [
+								"{{base_url}}configuracion"
+							],
+							"path": [
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Configuracion (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_config\": 1,\r\n    \"tipo_cultivo\": \"Maiz\",\r\n    \"parametro\": \"humedad_min\",\r\n    \"valor_minimo\": \"30.00\",\r\n    \"valor_maximo\": \"60.00\",\r\n    \"unidad\": \"%\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}configuracion/1/",
+							"host": [
+								"{{base_url}}configuracion"
+							],
+							"path": [
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Configuracion (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}configuracion/1/",
+							"host": [
+								"{{base_url}}configuracion"
+							],
+							"path": [
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Granos",
+			"item": [
+				{
+					"name": "Crear Granos (POST)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Trigo\",\r\n  \"descripcion\": \"Grano utilizado principalmente para la producción de harina.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}grano/granos/",
+							"host": [
+								"{{base_url}}grano"
+							],
+							"path": [
+								"granos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Grano (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}grano/granos/",
+							"host": [
+								"{{base_url}}grano"
+							],
+							"path": [
+								"granos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Grano por ID (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}grano/granos/1/",
+							"host": [
+								"{{base_url}}grano"
+							],
+							"path": [
+								"granos",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Grano (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Trigo\",\r\n    \"descripcion\": \"Grano utilizado principalmente para la producción de harina de Trigo refinada.\",\r\n    \"fecha_registro\": \"2025-06-08\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}grano/granos/1/",
+							"host": [
+								"{{base_url}}grano"
+							],
+							"path": [
+								"granos",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Grano (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Trigo\",\r\n    \"descripcion\": \"Grano utilizado principalmente para la producción de harina de Trigo refinada.\",\r\n    \"fecha_registro\": \"2025-06-08\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}grano/granos/1/",
+							"host": [
+								"{{base_url}}grano"
+							],
+							"path": [
+								"granos",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lotes",
+			"item": [
+				{
+					"name": "Crear Lotes (POST)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codigo\": \"LT-20250608-01\",\r\n  \"grano\": 2,\r\n  \"cantidad_kg\": 5000.00,\r\n  \"fecha_ingreso\": \"2025-06-08\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}lote/lotes/",
+							"host": [
+								"{{base_url}}lote"
+							],
+							"path": [
+								"lotes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Lotes (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}lote/lotes/",
+							"host": [
+								"{{base_url}}lote"
+							],
+							"path": [
+								"lotes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Lotes por ID (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}lote/lotes/1/",
+							"host": [
+								"{{base_url}}lote"
+							],
+							"path": [
+								"lotes",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Lotes (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"codigo\": \"LT-20250608-01\",\r\n    \"grano\": 1,\r\n    \"cantidad_kg\": \"10000.00\",\r\n    \"fecha_ingreso\": \"2025-06-08\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}lote/lotes/1/",
+							"host": [
+								"{{base_url}}lote"
+							],
+							"path": [
+								"lotes",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Lotes (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"codigo\": \"LT-20250608-01\",\r\n    \"grano\": 1,\r\n    \"cantidad_kg\": \"10000.00\",\r\n    \"fecha_ingreso\": \"2025-06-08\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}lote/lotes/1/",
+							"host": [
+								"{{base_url}}lote"
+							],
+							"path": [
+								"lotes",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inventarios",
+			"item": [
+				{
+					"name": "Crear Inventarios (POST)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipo_grano\": \"maiz\",\r\n  \"peso_kg\": 1200.50,\r\n  \"humedad_porcentaje\": 13.75,\r\n  \"fecha_ingreso\": \"2025-06-08\",\r\n  \"observaciones\": \"Buen estado general del lote\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}inventarios/",
+							"host": [
+								"{{base_url}}inventarios"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Inventarios (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}inventarios/",
+							"host": [
+								"{{base_url}}inventarios"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Inventarios por ID (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}inventarios/1/",
+							"host": [
+								"{{base_url}}inventarios"
+							],
+							"path": [
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Inventarios (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"tipo_grano\": \"maiz\",\r\n    \"peso_kg\": \"1200.50\",\r\n    \"humedad_porcentaje\": \"13.75\",\r\n    \"fecha_ingreso\": \"2025-06-08\",\r\n    \"observaciones\": \"El lote no cumple con las condiciones de calidad\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}inventarios/1/",
+							"host": [
+								"{{base_url}}inventarios"
+							],
+							"path": [
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Inventarios (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"tipo_grano\": \"maiz\",\r\n    \"peso_kg\": \"1200.50\",\r\n    \"humedad_porcentaje\": \"13.75\",\r\n    \"fecha_ingreso\": \"2025-06-08\",\r\n    \"observaciones\": \"El lote no cumple con las condiciones de calidad\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}inventarios/1/",
+							"host": [
+								"{{base_url}}inventarios"
+							],
+							"path": [
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Procesamiento",
+			"item": [
+				{
+					"name": "Crear Procesamiento (POST)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"lote\": 2,\r\n  \"etapa\": \"Secado\",\r\n  \"descripcion\": \"Proceso para reducir la humedad del grano.\",\r\n  \"fecha_inicio\": \"2025-06-07\",\r\n  \"fecha_fin\": \"2025-06-08\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}procesamiento/",
+							"host": [
+								"{{base_url}}procesamiento"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Procesamiento (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"lote\": 2,\r\n  \"etapa\": \"Secado\",\r\n  \"descripcion\": \"Proceso para reducir la humedad del grano.\",\r\n  \"fecha_inicio\": \"2025-06-07\",\r\n  \"fecha_fin\": \"2025-06-08\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}procesamiento/",
+							"host": [
+								"{{base_url}}procesamiento"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Procesamiento por ID (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"lote\": 2,\r\n  \"etapa\": \"Secado\",\r\n  \"descripcion\": \"Proceso para reducir la humedad del grano.\",\r\n  \"fecha_inicio\": \"2025-06-07\",\r\n  \"fecha_fin\": \"2025-06-08\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}procesamiento/1/",
+							"host": [
+								"{{base_url}}procesamiento"
+							],
+							"path": [
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Procesamiento (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"lote\": 2,\r\n  \"etapa\": \"Secado final\",\r\n  \"descripcion\": \"Etapa final de secado con ventilación controlada.\",\r\n  \"fecha_inicio\": \"2025-06-07\",\r\n  \"fecha_fin\": \"2025-06-09\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}procesamiento/1/",
+							"host": [
+								"{{base_url}}procesamiento"
+							],
+							"path": [
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Procesamiento (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"lote\": 2,\r\n  \"etapa\": \"Secado final\",\r\n  \"descripcion\": \"Etapa final de secado con ventilación controlada.\",\r\n  \"fecha_inicio\": \"2025-06-07\",\r\n  \"fecha_fin\": \"2025-06-09\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}procesamiento/1/",
+							"host": [
+								"{{base_url}}procesamiento"
+							],
+							"path": [
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Calidad",
+			"item": [
+				{
+					"name": "Crear Calidad (POST)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codigo\": \"L-20250608-01\",\r\n  \"producto\": \"Maíz\",\r\n  \"origen\": \"Finca El Sol\",\r\n  \"fecha_recepcion\": \"2025-06-08\",\r\n  \"peso_total_kg\": 1500.50,\r\n  \"observaciones\": \"Buena condición, sin daños visibles\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}calidad/control/",
+							"host": [
+								"{{base_url}}calidad"
+							],
+							"path": [
+								"control",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Prueba (POST)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"lote\": 1,\r\n  \"humedad\": 13.25,\r\n  \"impurezas\": 0.80,\r\n  \"color\": \"Amarillo intenso\",\r\n  \"fecha_prueba\": \"2025-06-08\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}calidad/prueba/",
+							"host": [
+								"{{base_url}}calidad"
+							],
+							"path": [
+								"prueba",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Calidad (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}calidad/control/",
+							"host": [
+								"{{base_url}}calidad"
+							],
+							"path": [
+								"control",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Prueba (GET)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}calidad/prueba/",
+							"host": [
+								"{{base_url}}calidad"
+							],
+							"path": [
+								"prueba",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Calidad por ID (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}calidad/control/1/",
+							"host": [
+								"{{base_url}}calidad"
+							],
+							"path": [
+								"control",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Prueba por ID (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}calidad/prueba/1/",
+							"host": [
+								"{{base_url}}calidad"
+							],
+							"path": [
+								"prueba",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Calidad (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"codigo\": \"L-20250608-01\",\r\n    \"producto\": \"Maíz\",\r\n    \"fecha_recepcion\": \"2025-06-08\",\r\n    \"peso_total_kg\": \"1500.50\",\r\n    \"observaciones\": \"Buena condición, pendiente muestra calidad\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}calidad/control/1/",
+							"host": [
+								"{{base_url}}calidad"
+							],
+							"path": [
+								"control",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Prueba (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"lote\": 1,\r\n    \"humedad\": \"13.25\",\r\n    \"impurezas\": \"0.80\",\r\n    \"color\": \"Amarillo palido\",\r\n    \"fecha_prueba\": \"2025-06-08\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}calidad/prueba/1/",
+							"host": [
+								"{{base_url}}calidad"
+							],
+							"path": [
+								"prueba",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Calidad (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}calidad/control/1/",
+							"host": [
+								"{{base_url}}calidad"
+							],
+							"path": [
+								"control",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Prueba (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}calidad/prueba/1/",
+							"host": [
+								"{{base_url}}calidad"
+							],
+							"path": [
+								"prueba",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reportes",
+			"item": [
+				{
+					"name": "Crear Reportes (POST)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipo_grano\": \"arroz\",\r\n  \"fecha\": \"2025-06-08\",\r\n  \"humedad\": 12.50,\r\n  \"impurezas\": 1.75,\r\n  \"peso_neto\": 1500.00,\r\n  \"observaciones\": \"Buen estado general del lote\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}reportes/",
+							"host": [
+								"{{base_url}}reportes"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Reportes (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipo_grano\": \"arroz\",\r\n  \"fecha\": \"2025-06-08\",\r\n  \"humedad\": 12.50,\r\n  \"impurezas\": 1.75,\r\n  \"peso_neto\": 1500.00,\r\n  \"observaciones\": \"Buen estado general del lote\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}reportes/",
+							"host": [
+								"{{base_url}}reportes"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Reportes por ID (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipo_grano\": \"arroz\",\r\n  \"fecha\": \"2025-06-08\",\r\n  \"humedad\": 12.50,\r\n  \"impurezas\": 1.75,\r\n  \"peso_neto\": 1500.00,\r\n  \"observaciones\": \"Buen estado general del lote\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}reportes/1/",
+							"host": [
+								"{{base_url}}reportes"
+							],
+							"path": [
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Reportes por ID (GET) Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipo_grano\": \"maiz\",\r\n  \"fecha\": \"2025-06-07\",\r\n  \"humedad\": 13.20,\r\n  \"impurezas\": 1.20,\r\n  \"peso_neto\": 1450.75,\r\n  \"observaciones\": \"Ligeras impurezas observadas\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}reportes/1/",
+							"host": [
+								"{{base_url}}reportes"
+							],
+							"path": [
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Reportes por ID (GET) Copy 2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipo_grano\": \"maiz\",\r\n  \"fecha\": \"2025-06-07\",\r\n  \"humedad\": 13.20,\r\n  \"impurezas\": 1.20,\r\n  \"peso_neto\": 1450.75,\r\n  \"observaciones\": \"Ligeras impurezas observadas\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}reportes/1/",
+							"host": [
+								"{{base_url}}reportes"
+							],
+							"path": [
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cosecha",
+			"item": [
+				{
+					"name": "Crear ReporteAlertas (POST)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"titulo\": \"Reporte de humedad - Mañana\",\r\n  \"contenido\": \"Los niveles de humedad se mantienen dentro del rango normal.\",\r\n  \"alerta\": false\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}cosechas/reporteAlertas/",
+							"host": [
+								"{{base_url}}cosechas"
+							],
+							"path": [
+								"reporteAlertas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar ReporteAlertas (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"titulo\": \"Reporte de humedad - Mañana\",\r\n  \"contenido\": \"Los niveles de humedad se mantienen dentro del rango normal.\",\r\n  \"alerta\": false\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}cosechas/reporteAlertas/",
+							"host": [
+								"{{base_url}}cosechas"
+							],
+							"path": [
+								"reporteAlertas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener ReporteAlertas por ID (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"titulo\": \"Reporte de humedad - Mañana\",\r\n  \"contenido\": \"Los niveles de humedad se mantienen dentro del rango normal.\",\r\n  \"alerta\": false\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}cosechas/reporteAlertas/1/",
+							"host": [
+								"{{base_url}}cosechas"
+							],
+							"path": [
+								"reporteAlertas",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar ReporteAlertas (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"titulo\": \"Reporte de humedad actualizado\",\r\n  \"contenido\": \"Se detectaron fluctuaciones, revisar sensores.\",\r\n  \"alerta\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}cosechas/reporteAlertas/1/",
+							"host": [
+								"{{base_url}}cosechas"
+							],
+							"path": [
+								"reporteAlertas",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar ReporteAlertas (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"titulo\": \"Reporte de humedad actualizado\",\r\n  \"contenido\": \"Se detectaron fluctuaciones, revisar sensores.\",\r\n  \"alerta\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}cosechas/reporteAlertas/1/",
+							"host": [
+								"{{base_url}}cosechas"
+							],
+							"path": [
+								"reporteAlertas",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear ConfigAlertas (POST)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"humedad_minima\": 35.0,\r\n  \"humedad_maxima\": 65.0\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}cosechas/configuracionAlertas/",
+							"host": [
+								"{{base_url}}cosechas"
+							],
+							"path": [
+								"configuracionAlertas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar ConfigAlertas (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"humedad_minima\": 35.0,\r\n  \"humedad_maxima\": 65.0\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}cosechas/configuracionAlertas/",
+							"host": [
+								"{{base_url}}cosechas"
+							],
+							"path": [
+								"configuracionAlertas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener por ID ConfigAlertas (GET)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"humedad_minima\": 35.0,\r\n  \"humedad_maxima\": 65.0\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}cosechas/configuracionAlertas/1/",
+							"host": [
+								"{{base_url}}cosechas"
+							],
+							"path": [
+								"configuracionAlertas",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar ConfigAlertas (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"humedad_minima\": 40.0,\r\n  \"humedad_maxima\": 60.0\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}cosechas/configuracionAlertas/1/",
+							"host": [
+								"{{base_url}}cosechas"
+							],
+							"path": [
+								"configuracionAlertas",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ConfigAlertas (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"humedad_minima\": 40.0,\r\n  \"humedad_maxima\": 60.0\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}cosechas/configuracionAlertas/1/",
+							"host": [
+								"{{base_url}}cosechas"
+							],
+							"path": [
+								"configuracionAlertas",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000/"
+		}
+	]
+}
