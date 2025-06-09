@@ -1,7 +1,12 @@
 from rest_framework import serializers
-from apps.cosechas.models import Reporte
+from apps.cosechas.models import ReporteAlertas, ConfiguracionAlertas
 
 class ReporteSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Reporte
-        fields = ['id', 'titulo', 'contenido', 'alerta', 'fecha_generacion']
+        model = ReporteAlertas
+        fields = ('id', 'titulo', 'contenido','fecha_generacion', 'alerta')
+
+class ConfiguracionAlertasSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ConfiguracionAlertas
+        fields = ('id', 'humedad_minima', 'humedad_maxima', 'ultima_actualizacion')

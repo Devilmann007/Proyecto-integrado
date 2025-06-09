@@ -1,7 +1,6 @@
-from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-class Reporte(models.Model):
+class ReporteAlertas(models.Model):
     titulo = models.CharField(max_length=200)
     contenido = models.TextField()
     fecha_generacion = models.DateTimeField(auto_now_add=True)
@@ -16,7 +15,7 @@ class ConfiguracionAlertas(models.Model):
     ultima_actualizacion = models.DateTimeField(auto_now=True)
 
     class Meta:
-        verbose_name = "Configuración de Alertas"
+        verbose_name = "Configuración de Alerta"
         verbose_name_plural = "Configuraciones de Alertas"
 
     def _str_(self):
